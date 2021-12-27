@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+.nav-container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.nav-title{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 25px;
+    user-select: none;
+}
+.nav-title span, .logo span{
+    padding: 10px;
+    color: #fff;
+    background-color: #000;
+}
+.nav-list{
+    display: flex;
+}
+
+/* Mobile view port */
+@media only screen and (max-width: 600px) {
+    .nav-title{
+        text-align: center;
+    }
+  }

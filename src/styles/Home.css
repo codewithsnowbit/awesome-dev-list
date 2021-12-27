@@ -1,0 +1,27 @@
+
+.header-logo{
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.listHeader{
+    display: flex;
+    height: 100vh;
+}
+.h-card{
+    width: 20rem;
+    margin-bottom: 30px;
+}
+.h-title{
+    font-family: 'IBM Plex Mono', monospace;
+}
+.h-title a{
+    text-decoration: none;
+    color: #000;
+}
+.h-description{
+    margin-top: 15px;
+    font-family: 'IBM Plex Mono', monospace;
+}
