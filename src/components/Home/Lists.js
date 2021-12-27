@@ -1,21 +1,35 @@
 import React from 'react'
-import Data from '../../data/dataLists'
 
 function Lists() {
+    const [list, setList] = React.useState([])
+
+
+    const getArticles = async () => {
+        await fetch('https://dev.to/api/articles')
+        .then(res => res.json())
+        .then(data => {
+            setList(data)
+         
+        })
+    }
+    getArticles()
     return (
         <div className="listHeader">
-            <div>
-            {Data.map((list, index) => {
+            <div className="listGrid">
+            {list.map((item) => {
                 return (
-                    <div key={index} className="card h-card">
-                        <img src={list.image} alt={list.title} className="h-img img-fluid" />
-                        <div className="card-body">
-                            <h2 className="card-title h-title"><a href={`/${list.slug}`}>{list.title}</a></h2>
-                            <p className="card-text h-description">{list.description}</p>
+                    <div className="article">
+                        <div className="article-link">
+                            <ul>
+                             <li><a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a>
+                             <p className="article-description">{item.description}</p>
+                             </li>   
+                            </ul>
                         </div>
                     </div>
                 )
             })}
+
             </div>
         </div>
     )
