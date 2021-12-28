@@ -44,3 +44,6 @@
      background-color: #F3F5F6;
      padding: 0 10px;
 }
+.monospace{
+    font-family: 'IBM Plex Mono', monospace;
+}

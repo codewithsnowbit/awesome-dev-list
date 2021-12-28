@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../Footer'
 import HR from '../HR'
 import Dev from './Dev'
 import HackerNews from './HackerNews'
@@ -11,6 +12,7 @@ function Lists() {
                 <Dev />
                     <HR text="HackerNews"/>             
                 <HackerNews />
+                <Footer />
             </div>
         </div>
     )
