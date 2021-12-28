@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Dev() {
     const [devList, setDevList] = React.useState([])
 
@@ -14,11 +15,11 @@ function Dev() {
     }
     getDevArticles()
     return (
-        <div className="listHeader">
+        <div>
             <div className="listGrid">
             {devList.map((item) => {
                 return (
-                    <div className="article">
+                    <div className="article" key={item.id}>
                         <div className="article-link">
                             <ul>
                              <li><a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a>
@@ -29,7 +30,6 @@ function Dev() {
                     </div>
                 )
             })}
-
             </div>
         </div>
     )

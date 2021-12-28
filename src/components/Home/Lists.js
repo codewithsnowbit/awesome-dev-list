@@ -1,12 +1,17 @@
 import React from 'react'
+import HR from '../HR'
 import Dev from './Dev'
-// import HackerNews from './HackerNews'
+import HackerNews from './HackerNews'
 
 function Lists() {
     return (
-        <div>
-            <Dev />
-            {/* <HackerNews /> */}
+        <div className="listHeader">
+            <div>
+                <HR text="DEV"/>             
+                <Dev />
+                    <HR text="HackerNews"/>             
+                <HackerNews />
+            </div>
         </div>
     )
 }
