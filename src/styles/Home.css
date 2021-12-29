@@ -6,6 +6,9 @@
     align-items: center;
     height: 100vh;
 }
+.arrow{
+    width: 100px;
+}
 .listHeader{
     display: flex;
     height: 100vh;
