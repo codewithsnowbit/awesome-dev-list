@@ -12,12 +12,13 @@ function Dev() {
         .then(res => res.json())
         .then(data => {
             setDevList(data)
-         
         })
     }
     useEffect(() => {
-        getDevArticles()
-    }, [])
+        if(devList.length === 0) {
+            getDevArticles()
+        }
+    }, [devList])
     return (
         <div>
             <div className="listGrid">
@@ -27,6 +28,7 @@ function Dev() {
                         <div className="article-link">
                             <ul>
                              <li><a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a>
+                                <p>[{item.tags}]</p>
                              <p className="article-description">{item.description}</p>
                              </li>   
                             </ul>
