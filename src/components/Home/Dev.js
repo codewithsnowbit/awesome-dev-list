@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 
 function Dev() {
@@ -6,14 +6,18 @@ function Dev() {
 
 
     const getDevArticles = async () => {
-        await fetch('https://dev.to/api/articles')
+        // genreate random number between 1 and 920
+        const index = Math.floor(Math.random() * 920) + 1
+        await fetch(`https://dev.to/api/articles?per_page=50&page=${index}`)
         .then(res => res.json())
         .then(data => {
             setDevList(data)
          
         })
     }
-    getDevArticles()
+    useEffect(() => {
+        getDevArticles()
+    }, [])
     return (
         <div>
             <div className="listGrid">
